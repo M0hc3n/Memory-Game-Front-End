@@ -19,7 +19,7 @@ function Cards(props) {
         if(finishedCards.length === 20){
             console.log('WON ! ');
             
-            axios.post('http://localhost:5000/api/v1/players', {fullName: playerName, highScore: moves})
+            axios.post('https://memory-game-app.onrender.com/api/v1/players', {fullName: playerName, highScore: moves})
         }
     }, [finishedCards])
     
