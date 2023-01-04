@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed ;
+    font-family: 'Fredoka', sans-serif;
+    width: 100%;
+}
+
+/* Home container */
+
+.home.main-container{
+    margin-top: 5rem;
+}
+
+.home.main-container h1{
+    color: black;
+}
+
+.home.main-container form{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+.home.main-container input{
+    margin-top: .5rem;
+    height: 2.5rem;
+    width: 16.5rem;
+    padding-left: 1rem;
+    font-size: 1.3rem;
+    letter-spacing: .05rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.home.main-container input:focus{
+    border: none;
+    outline: 2px solid #ffc55b;
+}
+
+
+.home.main-container a{
+    margin-top: 2rem;
+}
+
+
+
+/* Main container */
+
+.main-container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-container h1{
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    color: royalblue;
+}
+
+.main-container .cards-container{
+    width: 95%;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    padding: 1rem;
+    grid-gap: .7rem;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px rgb(33 33 33 / 25%);
+    background-color: #4158D0;
+    background-image: linear-gradient(200deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%) ;
+    transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    backface-visibility: hidden;
+    place-content: center;
+}
+
+.main-container .cards-container .card{
+    height: 5.5rem;
+    width: 5.5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.main-container .cards-container .card .card-back,
+.main-container .cards-container .card .card-front{
+    height: 100%;
+    width: 100%;
+    background: #282A3A;
+    position: absolute;
+    transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    backface-visibility: hidden;
+    border-radius: .7rem;
+}
+
+.main-container .cards-container .card .card-front{
+    font-size: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(74, 74, 74);
+}
+
+.main-container .cards-container .card .card-back{
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 80px;
+    background: #dfdfdf;
+    transform: rotateY(180deg) rotateZ(50deg);
+    user-select: none;
+}
+
+.main-container .cards-container .card.flipped .card-front {
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+
+.main-container .cards-container .card.flipped .card-back {
+    transform: rotateY(0) rotateZ(0);
+}
+
+.main-container .game-result {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.main-container .game-result p{
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+}
+
+.new-game-btn{
+    margin-top: 1rem;
+    width: 15rem;
+    position: relative;
+    height: 3rem;
+    margin-bottom: 5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .05rem;
+    background-color: #FFCC70;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: .3s ease background-color;
+    color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.home.main-container .new-game-btn{
+    line-height: 2.8rem;
+}
+
+.new-game-btn:hover{
+    background-color: #ffc55b;
+}
+
+.main-container .winning-statement{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 710px) {
+    
+    .main-container .cards-container .card{
+        height: 6.5rem;
+        width: 6.5rem;
+    }
+    
+    .main-container{
+        width: 40rem;
+    }
+
+    .main-container .cards-container .card .card-back{
+        line-height: 100px;        
+    }
+}
