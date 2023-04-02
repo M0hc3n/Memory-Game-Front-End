@@ -9,6 +9,19 @@ a{
     text-decoration: none;
 }
 
+.k{
+    display: flex;
+}
+.game-result{
+    width: 500px;
+    color: white;
+}
+.bigger_container{
+    width: 100%;
+    display: flex;
+    gap: 100px;
+
+}
 body{
     background-color: #4158D0;
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
@@ -20,12 +33,19 @@ body{
 
 /* Home container */
 
+
+form label{
+    text-align: center;
+    color: white;
+}
+
 .home.main-container{
     margin-top: 5rem;
 }
 
 .home.main-container h1{
-    color: black;
+    color: white;
+    font-size: 3rem;
 }
 
 .home.main-container form{
@@ -44,6 +64,7 @@ body{
     letter-spacing: .05rem;
     border-radius: 5px;
     border: none;
+    color: #282a3a;
 }
 
 .home.main-container input:focus{
@@ -61,7 +82,7 @@ body{
 /* Main container */
 
 .main-container{
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3rem;
@@ -70,14 +91,20 @@ body{
     align-items: center;
 }
 
-.main-container h1{
-    font-size: 2rem;
+
+.top_title{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3rem;
     letter-spacing: .1rem;
-    color: royalblue;
+    color: white;
+    
 }
 
+
 .main-container .cards-container{
-    width: 95%;
+    margin-left: 200px;
+    width: 100%;
     margin-top: 1rem;
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -136,7 +163,7 @@ body{
 }
 
 .main-container .game-result {
-    margin-top: 2rem;
+    margin-top: 8rem;
     margin-bottom: 2rem;
 }
 
@@ -145,11 +172,31 @@ body{
     letter-spacing: 0.1rem;
     font-weight: 500;
 }
-
-.new-game-btn{
-    margin-top: 1rem;
+.home-new-game-btn{
     width: 15rem;
     position: relative;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .05rem;
+    background-color: #FFCC70;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.8s ease-out background-color;
+    color: #282a3a;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:8px;
+    text-align: center;
+}
+.new-game-btn{
+    position: relative;
+    top: 170px;
+    right: 285px;
+    margin-top: 1rem;
+    width: 15rem;
     height: 3rem;
     margin-bottom: 5rem;
     font-size: 1.5rem;
@@ -159,8 +206,8 @@ body{
     border: none;
     border-radius: 1rem;
     cursor: pointer;
-    transition: .3s ease background-color;
-    color: black;
+    transition: 0.3s ease-out background-color;
+    color: #282a3a;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -170,18 +217,20 @@ body{
 .home.main-container .new-game-btn{
     line-height: 2.8rem;
 }
-
+.home-new-game-btn:hover,
 .new-game-btn:hover{
     background-color: #ffc55b;
+    transform: translateY(-5px);
 }
 
 .main-container .winning-statement{
     margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 500;
+    color: white;
 }
 
-@media screen and (min-width: 710px) {
+@media screen and (max-width: 500px) {
     
     .main-container .cards-container .card{
         height: 6.5rem;
@@ -191,8 +240,33 @@ body{
     .main-container{
         width: 40rem;
     }
-
+    .main-container .cards-container{
+        margin-left: 0px;
+    }
     .main-container .cards-container .card .card-back{
         line-height: 100px;        
     }
+    .bigger_container{
+        display: block;
+    }
+
+    .new-game-btn{
+        white-space: nowrap;
+        padding-right: 10px;
+        padding-left: 10px;
+        top: 680px; 
+        right: 185px;
+        height: 70px;
+    }
+    .game-result{
+        padding: 20px;
+    }
+   .winning-statement{
+    padding: 20px;
+    font-size: 1rem;
+   }
+   .h{
+    margin-top: -100px;
+   }
+
 }

@@ -60,10 +60,16 @@ function Cards(props) {
 
   return (
     <>
-        <div className='cards-container'>
+ 
+    <div className="bigger_container">
+        
+    <div className='cards-container'>
             {cardsList}
         </div>
-        <div className='game-result'>
+
+        <div className="h">
+
+             <div className='game-result'>
             <p>Moves : {moves} </p>
             <p>Left : {10 - finishedCards.length / 2}</p>
         </div>
@@ -75,6 +81,12 @@ function Cards(props) {
                 </div>
             </>
       }
+        </div>
+        
+       
+
+    </div>
+        
     </>
   )
 }

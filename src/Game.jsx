@@ -32,7 +32,6 @@ function Game(props) {
 
   return (
     <section className='main-container'>
-      <h1>Have Fun !</h1>
       <Cards icons={icons} 
              selectedCards={selectedCards} 
              setSelectedCards={setSelectedCards}
