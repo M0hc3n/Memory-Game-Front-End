@@ -33,8 +33,12 @@ function App() {
 
   return (
     <>
-      <Game icons={icons} newGame={newGame} playerName={playerName} />
+    <h1 className='top_title'>Have Fun !</h1>
+    <div className="k">
+    <Game icons={icons} newGame={newGame} playerName={playerName} />
       <button className='new-game-btn' onClick={() => setNewGame(! newGame)}>New Game ! </button>
+    </div>
+
     </>
   )
 }

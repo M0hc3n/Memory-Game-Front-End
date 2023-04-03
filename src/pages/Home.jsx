@@ -19,7 +19,7 @@ function Home() {
         <form onSubmit={handleSubmit}>
             <label htmlFor="player-name">Who's playing ? </label>
             <input type="text" id='player-name' name='player-name' value={playerName} placeholder='Joe Doe' onChange={handleChange} required />
-            <Link to={`/game/${playerName}`} className='new-game-btn'>Let's Play !</Link>
+            <Link to={`/game/${playerName}`} className='home-new-game-btn'>Let's Play !</Link>
         </form>
     </section>
   )
